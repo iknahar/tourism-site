@@ -42,7 +42,6 @@ const AllBooking = () => {
                         <th style={{width:'15vw'}}>Title</th>
                         <th style={{width:'10vw'}}>Price</th>
                         <th>Customer Name</th>
-                        <th>Service Date</th>
                         <th style={{width:'14vw'}}>Action</th>
                     </tr>
                 </thead>
@@ -50,10 +49,10 @@ const AllBooking = () => {
                     {
                         bookings.map(service =>
                             <tr key={service._id} style={{textAlign:'center'}}>
-                            <td>{service.customerInfo.title}</td>
+                            <td>{service.title}</td>
                             <td>{service.price}</td>
-                            <td>{service.customerInfo.name}</td>
-                            <td>{service.serviceDate}</td>
+                            <td>{service.name}</td>
+
                             <td>
                                 <Button style={{ width: '7vw'}} variant="danger" onClick={()=> handleDelete(service._id)}>Delete</Button>
                             </td>

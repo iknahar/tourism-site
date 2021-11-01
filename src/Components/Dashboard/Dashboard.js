@@ -4,15 +4,15 @@ import Sidebar from './Sidebar/Sidebar';
 
 const Dashboard = () => {
     return (
-        <div className="container-fluid row">
-            <div className="col-md-2" style={{background: '#343A40'}}>
-                <Sidebar/>
-            </div>
-                        
-            <div className="col-md-10" style={{}}>
-                <DashboardDetails/>
-            </div>            
+      <div className="container-fluid row">
+        <div className="col-md-2" style={{ background: "#094a75" }}>
+          <Sidebar />
         </div>
+
+        <div className="col-md-10" style={{}}>
+          <DashboardDetails />
+        </div>
+      </div>
     );
 };
 
