@@ -15,7 +15,6 @@ import Home from "./Components/Home/Home";
 import Service from "./Components/Home/Service/Service";
 import Login from "./Components/Login/Login";
 import Manage from "./Components/Manage/Manage";
-import MyOrder from "./Components/MyOder/MyOrder";
 import NavBar from "./Components/NavBar/NavBar";
 import NoMatch from "./Components/NoMatch/NoMatch";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
@@ -48,9 +47,7 @@ function App() {
           <PrivateRoute path="/all-booking">
             <AllBooking />
           </PrivateRoute>
-          <PrivateRoute path="/my-booking">
-            <MyOrder />
-          </PrivateRoute>
+         
           <Route path="/login">
             <Login />
           </Route>

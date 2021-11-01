@@ -55,11 +55,7 @@ const NavBar = () => {
                 All Booking
               </Nav.Link>
             )}
-            {loggedInUser.email && (
-              <Nav.Link as={Link} to="/my-booking" className="text-color">
-                My Booking
-              </Nav.Link>
-            )}
+           
             {loggedInUser.email && (
               <Nav.Link as={Link} to="/add-service" className="text-color">
                 Add a New Service
