@@ -1,0 +1,14 @@
+.sidebar li{
+    margin-bottom: 2em;
+}
+.listStyle span{
+    color: #fff;
+}
+.sidebar li:hover span{
+    display: inline-block;
+    transform: translate(5px);
+}
+.sidebar svg{
+    color: #fff;
+    margin-right: 1rem;
+}
