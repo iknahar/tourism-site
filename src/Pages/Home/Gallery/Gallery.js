@@ -5,11 +5,11 @@ AOS.init();
 
 const Gallery = () => {
     return (
-        <div className="overflow-hidden" data-aos="zoom-in-up" data-aos-duration="2000" style={{background: "#f2f2f2"}}>
+        <div className="overflow-hidden p-5" data-aos="zoom-in-up" data-aos-duration="2000" style={{background: "#f2f2f2"}}>
             <h3 className="text-center text-primary p-3"><b>Our Gallery</b></h3>
 
-            <div class="row">
-                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <div class="row ">
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 ">
                     <img
                         src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
                         class="w-100 shadow-1-strong rounded mb-4 " 
