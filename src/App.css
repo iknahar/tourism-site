@@ -1,8 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Kristi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap');
+ 
 
 
-* {
+p {
   font-family: 'Montserrat', sans-serif;
-  
+  /* color: #00000071; */
+}
+
+
+
+.btn-grad2 {background-image: linear-gradient(to right, #F7971E 0%, #FFD200  51%, #F7971E  100%)}
+.btn-grad2 {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   outline: none;
+   border: none;
+   text-decoration: none;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btn-grad2:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+ }
+
+ .myoverlay {
+
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to top, #33333373 0%, #2929294b  51%, #31313134  100%);
+  /* background-color: rgba(0, 0, 0, 0.247); */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.pDescription{
+  line-height: 16px !important;
+  font-size: 16px;
+  color: #eee;
+  font-weight: 400;
+}
+
+.ptitle{
+  border: 1px solid rgba(255, 255, 255, 0);
+  background-color: #0bba94;
+  margin-left: -10px;
+  margin-top: -20px;
+}
+
+.bookbutton{
+  margin-top: 70px !important;
 }

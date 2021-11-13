@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Kristi&display=swap');
+
+.cursive-font{
+    font-family: 'Kristi', 'Montserrat', sans-serif;
+    font-size: 36px !important;
+  }
+
+.btn-grad {background-image: linear-gradient(to right, #1CD8D2 0%, #93EDC7  51%, #1CD8D2  100%)}
+.btn-grad {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: rgb(0, 0, 0);            
+   box-shadow: 0 0 20px rgba(238, 238, 238, 0.521);
+   border-radius: 10px;
+   display: block;
+   outline: none;
+   border: none;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: rgb(0, 0, 0);
+   text-decoration: none;
+ }

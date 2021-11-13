@@ -5,6 +5,9 @@ import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import Naviagation from './Pages/Shared/Navigation/Navigation';
+import AOS from 'aos'
+import 'aos/dist/aos.css';
+AOS.init();
 
 function App() {
 

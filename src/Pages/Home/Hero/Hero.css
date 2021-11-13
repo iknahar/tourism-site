@@ -1,0 +1,36 @@
+.banner {
+    padding: 2rem 0 6rem;
+    background-image: url(../../../images/heroimage.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+    margin-top: -56px;
+    transition: all 0.5s ease;
+    animation: animatedBackground 5s infinite;
+    
+  }
+
+  h2{
+    font-family: 'Kristi', 'Montserrat', sans-serif;
+    font-size: 6rem !important;
+    color: aliceblue;
+    line-height: 80px !important;
+    
+  }
+  h3{
+    font-family: 'Kristi', 'Montserrat', sans-serif;
+    font-size: 4rem !important;
+    line-height: 80px !important;
+    color: #24DAD2;
+    
+  }
+
+  h1{
+    color: aliceblue;
+  }
+
+  p{
+    font-size: 24px;
+    max-width: 800px;
+    line-height: 30px !important;
+  }
