@@ -5,7 +5,7 @@ AOS.init();
 
 const Gallery = () => {
     return (
-        <div className="overflow-hidden p-5" data-aos="zoom-in-up" data-aos-duration="2000" style={{background: "#f2f2f2"}}>
+        <div className="overflow-hidden p-5" style={{background: "#f2f2f2"}}>
             <h3 className="text-center text-primary p-3"><b>Our Gallery</b></h3>
 
             <div class="row ">
@@ -14,12 +14,16 @@ const Gallery = () => {
                         src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
                         class="w-100 shadow-1-strong rounded mb-4 " 
                         alt=""
+                        data-aos="fade-up-right"
+                        data-aos-duration="2000" 
                     />
 
                     <img
                         src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg"
                         class="w-100 shadow-1-strong rounded mb-4"
                         alt=""
+                        data-aos="fade-up-right"
+                        data-aos-duration="2000" 
                     />
                 </div>
 
@@ -28,12 +32,16 @@ const Gallery = () => {
                         src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg"
                         class="w-100 shadow-1-strong rounded mb-4"
                         alt=""
+                        data-aos="fade-up-down"
+                        data-aos-duration="2000" 
                     />
 
                     <img
                         src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
                         class="w-100 shadow-1-strong rounded mb-4"
                         alt=""
+                        data-aos="fade-up-down"
+                        data-aos-duration="2000" 
                     />
                 </div>
 
@@ -42,12 +50,16 @@ const Gallery = () => {
                         src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
                         class="w-100 shadow-1-strong rounded mb-4"
                         alt=""
+                        data-aos="fade-up-left"
+                        data-aos-duration="2000" 
                     />
 
                     <img
                         src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg"
                         className="w-100 shadow-1-strong rounded mb-4"
                         alt=""
+                        data-aos="fade-up-left"
+                        data-aos-duration="2000" 
                     />
                 </div>
             </div>

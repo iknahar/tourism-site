@@ -23,7 +23,7 @@ const Products = () => {
 
                     <div className="col-md-6 col-lg-4 ">
                         <div data-aos="zoom-in-up" data-aos-duration="2000" className="mx-3 my-5 shadow-lg pcard" style={{
-                            width: '400px', height: '200px', background: `url(${pd?.image})`,
+                            width: '400px', height: '280px', background: `url(${pd?.image})`,
                             backgroundRepeat: "no-repeat",
                             backgroundPosition: "center center",
                             backgroundSize: "cover", borderRadius: "15px"
