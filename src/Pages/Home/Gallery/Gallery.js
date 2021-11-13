@@ -15,7 +15,7 @@ const Gallery = () => {
                         class="w-100 shadow-1-strong rounded mb-4 " 
                         alt=""
                         data-aos="fade-up-right"
-                        data-aos-duration="2000" 
+                        data-aos-duration="1000" 
                     />
 
                     <img
@@ -23,7 +23,7 @@ const Gallery = () => {
                         class="w-100 shadow-1-strong rounded mb-4"
                         alt=""
                         data-aos="fade-up-right"
-                        data-aos-duration="2000" 
+                        data-aos-duration="1000" 
                     />
                 </div>
 
@@ -32,8 +32,8 @@ const Gallery = () => {
                         src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg"
                         class="w-100 shadow-1-strong rounded mb-4"
                         alt=""
-                        data-aos="fade-up-down"
-                        data-aos-duration="2000" 
+                        data-aos="fade-up"
+                        data-aos-duration="1000" 
                     />
 
                     <img
@@ -41,7 +41,7 @@ const Gallery = () => {
                         class="w-100 shadow-1-strong rounded mb-4"
                         alt=""
                         data-aos="fade-up-down"
-                        data-aos-duration="2000" 
+                        data-aos-duration="1000" 
                     />
                 </div>
 
@@ -51,7 +51,7 @@ const Gallery = () => {
                         class="w-100 shadow-1-strong rounded mb-4"
                         alt=""
                         data-aos="fade-up-left"
-                        data-aos-duration="2000" 
+                        data-aos-duration="1000" 
                     />
 
                     <img
@@ -59,7 +59,7 @@ const Gallery = () => {
                         className="w-100 shadow-1-strong rounded mb-4"
                         alt=""
                         data-aos="fade-up-left"
-                        data-aos-duration="2000" 
+                        data-aos-duration="1000" 
                     />
                 </div>
             </div>

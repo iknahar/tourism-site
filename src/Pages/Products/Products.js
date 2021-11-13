@@ -22,7 +22,7 @@ const Products = () => {
                 {products?.map((pd) => (
 
                     <div className="col-md-6 col-lg-4 ">
-                        <div data-aos="zoom-in-up" data-aos-duration="2000" className="mx-3 my-5 shadow-lg pcard" style={{
+                        <div data-aos="zoom-in-up" data-aos-duration="1000" className="mx-3 my-5 shadow-lg pcard" style={{
                             width: '400px', height: '280px', background: `url(${pd?.image})`,
                             backgroundRepeat: "no-repeat",
                             backgroundPosition: "center center",
