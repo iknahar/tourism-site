@@ -1,75 +1,35 @@
-import React, { createContext, useState } from "react";
-import {
-  BrowserRouter as Router,
-
-  Route, Switch
-} from "react-router-dom";
-import About from "./Components/About/About";
-import AddService from "./Components/AddService/AddService";
-import AllBooking from "./Components/AllBooking/AllBooking";
-import Book from "./Components/Book/Book";
-import Checkout from "./Components/Checkout/Checkout";
-import Dashboard from "./Components/Dashboard/Dashboard";
-import Footer from "./Components/Footer/Footer";
-import Home from "./Components/Home/Home";
-import Service from "./Components/Home/Service/Service";
-import Login from "./Components/Login/Login";
-import Manage from "./Components/Manage/Manage";
-import NavBar from "./Components/NavBar/NavBar";
-import NoMatch from "./Components/NoMatch/NoMatch";
-import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
-
-export const UserContext = createContext();
+import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from './Pages/Home/Home/Home';
+import AuthProvider from './contexts/AuthProvider/AuthProvider';
+import Login from './Pages/Login/Login/Login';
+import Register from './Pages/Login/Register/Register';
+import Naviagation from './Pages/Shared/Navigation/Navigation';
 
 function App() {
 
-  const [loggedInUser, setLoggedInUser] = useState({
-    isLoggedIn: false
-  });
-
   return (
-<UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-    <Router>
-      <NavBar/>
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/service">
-            <Service />
-          </Route>
-          <PrivateRoute path="/add-service">
-            <AddService />
-          </PrivateRoute>
-          <PrivateRoute path="/manage-service">
-            <Manage />
-          </PrivateRoute>
-          <PrivateRoute path="/all-booking">
-            <AllBooking />
-          </PrivateRoute>
-         
-          <Route path="/login">
-            <Login />
-          </Route>
-          <PrivateRoute path="/dashboard">
-            <Dashboard />
-          </PrivateRoute>
-          <PrivateRoute path="/book/:id">
-            <Book />
-          </PrivateRoute>
-          <PrivateRoute path="/checkout/:id">
-            <Checkout />
-          </PrivateRoute>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="*">
-            <NoMatch />
-          </Route>
-        </Switch>
-        <Footer/>
-    </Router>
-</UserContext.Provider>
+    <div className="App">
+      <AuthProvider>
+        <Router>
+          <Naviagation></Naviagation>
+          <Switch>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
+            <Route exact path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </Router>
+      </AuthProvider>
+    </div>
   );
 }
 
