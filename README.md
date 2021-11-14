@@ -8,3 +8,10 @@
 - Node
 - MOngoDB
 - Firebase
+
+# Features :
+- Adding a booking
+- Deleteing own booking
+- Live Status Update
+- List of Booking from all
+- New Service Add
