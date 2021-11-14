@@ -5,6 +5,7 @@ import UpcomingEvent from '../UpcomingEvent/UpcomingEvent';
 import Gallery from './../Gallery/Gallery';
 
 
+
 const Home = () => {
     return (
         <div>
@@ -12,6 +13,7 @@ const Home = () => {
             <Products></Products>
             <UpcomingEvent></UpcomingEvent>
             <Gallery></Gallery>
+           
         </div>
     );
 };

@@ -6,7 +6,7 @@ AOS.init();
 const Gallery = () => {
     return (
         <div className="overflow-hidden p-5" style={{background: "#f2f2f2"}}>
-            <h3 className="text-center text-primary p-3"><b>Our Gallery</b></h3>
+            <h3 className="text-center p-3"><b>Our Gallery</b></h3>
 
             <div class="row ">
                 <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 ">

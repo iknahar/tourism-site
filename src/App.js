@@ -7,6 +7,7 @@ import Register from './Pages/Login/Register/Register';
 import Naviagation from './Pages/Shared/Navigation/Navigation';
 import AOS from 'aos'
 import 'aos/dist/aos.css';
+import Footer from './Pages/Shared/Footer/Footer';
 AOS.init();
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             </Route>
           </Switch>
         </Router>
+        <Footer></Footer>
       </AuthProvider>
     </div>
   );
