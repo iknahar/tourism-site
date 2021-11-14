@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 // import useAuth from './../../hooks/useAuth';
+import bg from '../../images/25.jpg'
 
 
 const AddService = () => {
@@ -13,18 +14,25 @@ const AddService = () => {
 
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/addProducts", {
+    fetch("https://grim-crypt-33204.herokuapp.com/addProducts", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((result) =>  alert("Service Added"));
+      .then((result) => alert("Service Added"));
   };
   return (
-    <div>
+    <div style={{
+      background: `url(${bg})`,
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center center",
+      backgroundSize: "cover",
+      minHeight: "120vh",
+      marginTop: "-150px",
+    }} className="mx-auto">
       <div>
-        <h3 className="pt-3 mt-5 text-center ">Add A Service</h3>
+        <h3  style={{paddingTop:"170px", color: "white"}} className=" text-center ">Add A Service</h3>
         <div className="w-50 m-auto mt-5">
           <div className=" ">
             <div className="">

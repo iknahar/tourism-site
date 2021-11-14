@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink, useLocation, useHistory } from "react-router-dom";
 import useAuth from "./../../../hooks/useAuth";
 import { Alert, Col, Container, Row, Spinner, Button } from "react-bootstrap";
+import bg from '../../../images/27.jpg'
 
 
 const Login = () => {
@@ -22,25 +23,37 @@ const Login = () => {
     loginUser(loginData.email, loginData.password, location, history);
     e.preventDefault();
   };
+  const txbg = {
+    // background: "#00000071",
+    background: "rgba(0, 0, 0, 0.608)",
+    
+  };
 
-  
   return (
-    <div>
-      <Container>
+    <div style={{
+      background: `url(${bg})`,
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center center",
+      backgroundSize: "cover",
+      minHeight: "100vh",
+      marginTop: "-70px"
+    }}>
+      <Container style={txbg} className='m-auto p-5'>
         <Row className="d-flex align-items-center">
-          <Col>
-          <h3><b>Log</b> <span className="text-primary"><b>In</b></span></h3>
+          <Col >
+            <h3 data-aos="fade-down" data-aos-duration="1000"  style={{marginTop: "5rem", color: "white"}}>Log In</h3>
             <form onSubmit={handleLoginSubmit}>
               <input
-                className="my-3 p-1 w-75"
+                className="my-3 p-1 w-50"
                 id="standard-basic"
                 placeholder="Your Email"
                 name="email"
                 onChange={handleOnChange}
                 variant="standard"
               />
+              <br />
               <input
-                className="my-3 p-1  w-75"
+                className="my-3 p-1  w-50"
                 id="standard-basic"
                 placeholder="Your Password"
                 type="password"
@@ -49,11 +62,11 @@ const Login = () => {
                 variant="standard"
               />
               <br />
-              <Button className="rounded-pill px-5" type="submit">
+              <Button  className="rounded-pill px-5 btn-grad" type="submit">
                 Login
               </Button>
               <NavLink style={{ textDecoration: "none" }} to="/register">
-                <Button variant="link">New User? Please Register</Button>
+                <Button className="text-warning" variant="link">New User? Please Register</Button>
               </NavLink>
               {isLoading && <Spinner animation="grow" />}
               {user?.email && (

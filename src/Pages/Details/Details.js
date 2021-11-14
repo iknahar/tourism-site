@@ -23,18 +23,18 @@ const Details = () => {
     data.name = product?.name;
     data.image = product?.image;
     data.price = product?.price;
-    fetch("http://localhost:5000/addOrders", {
+    fetch("https://grim-crypt-33204.herokuapp.com/addOrders", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((result) =>  alert("Booking Successful"));
+      .then((result) => alert("Booking Successful"));
 
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/singleProduct/${productId}`)
+    fetch(`https://grim-crypt-33204.herokuapp.com/singleProduct/${productId}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [productId]);
@@ -43,7 +43,7 @@ const Details = () => {
     <div>
       <h5 className="text-white text center btn-grad rounded-0" style={{ marginTop: "32px" }}><b>{product?.name}</b></h5>
       <div className="row container-fluid p-5 d-flex align-items-top">
-        <div className="col-md-6 col-12 imgdiv" style={{ overflow: "hidden"  }}> <img style={{ objectFit: "cover", overflow: "hidden", height: "50vh", width: "100%" }} src={product.image} alt="" /></div>
+        <div className="col-md-6 col-12 imgdiv" style={{ overflow: "hidden" }}> <img style={{ objectFit: "cover", overflow: "hidden", height: "50vh", width: "100%" }} src={product.image} alt="" /></div>
         <div className="col-md-6">
           <p className="pDescription btn-grad2 px-3 py-1 d-inline my-2"> <b> ${product?.price}</b></p>
           <br />
@@ -51,7 +51,7 @@ const Details = () => {
           <small className="text-muted my-4">{product?.description}</small> <br /><br />
           <small className="text-primary m-0 p-0">User's Name: {user?.displayName}</small> <br />
           <small className="text-primary m-0 p-0">User's Email: {user?.email}</small>
-          
+
           <br />
           <form onSubmit={handleSubmit(onSubmit)}>
             <input
@@ -73,7 +73,7 @@ const Details = () => {
               value="Book Now"
               className="btn-grad2 mt-2 py-3 mx-1 rounded-pill"
             />
-          </form>  
+          </form>
         </div>
       </div>
 

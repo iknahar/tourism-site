@@ -2,12 +2,18 @@ import React, { useState } from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import useAuth from "./../../../hooks/useAuth";
 import { Alert, Container, Spinner, Button, Row, Col } from "react-bootstrap";
-
+import bg from '../../../images/27.jpg'
 
 const Register = () => {
   const [loginData, setLoginData] = useState({});
   const history = useHistory();
   const { user, registerUser, isLoading, authError } = useAuth();
+
+  const txbg = {
+    // background: "#00000071",
+    background: "rgba(0, 0, 0, 0.608)",
+    
+  };
 
   const handleOnBlur = (e) => {
     const field = e.target.name;
@@ -25,11 +31,18 @@ const Register = () => {
     e.preventDefault();
   };
   return (
-    <div>
+    <div style={{
+      background: `url(${bg})`,
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center center",
+      backgroundSize: "cover",
+      minHeight: "100vh",
+      marginTop: "-70px"
+    }}>
      
-      <Container>
+      <Container style={txbg} className='m-auto p-5'>
         <Row>
-        <h3><b>Sign</b> <span className="text-primary"><b>Up</b></span></h3>
+        <h3 data-aos="fade-up" data-aos-duration="1000"  style={{marginTop: "5rem", color: "white"}}>Register</h3>
           <Col>
             {!isLoading && (
               <form onSubmit={handleLoginSubmit}>
@@ -64,12 +77,12 @@ const Register = () => {
                   name="password2"
                   onBlur={handleOnBlur}
                 />
-
-                <Button className="rounded-pill px-5" type="submit">
+                <br />
+                <Button className="rounded-pill px-5 btn-grad" type="submit">
                   Register
                 </Button>
                 <NavLink style={{ textDecoration: "none" }} to="/login">
-                  <Button variant="link">
+                  <Button className="text-warning" variant="link">
                     Already Registered? Please Login
                   </Button>
                 </NavLink>

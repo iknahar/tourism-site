@@ -1,7 +1,7 @@
 import Button from "@restart/ui/esm/Button";
 import React, { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
-
+import bg from '../../images/24.jpg'
 
 
 const MyOrders = () => {
@@ -9,7 +9,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrder/${user?.email}`)
+        fetch(`https://grim-crypt-33204.herokuapp.com/myOrder/${user?.email}`)
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, [orders, user?.email]);
@@ -19,7 +19,7 @@ const MyOrders = () => {
     function handleDelete(id) {
         const confirmation = window.confirm("Are you sure to delete!!");
         if (confirmation) {
-            fetch(`http://localhost:5000/delete/${id}`, {
+            fetch(`https://grim-crypt-33204.herokuapp.com/delete/${id}`, {
                 method: "delete",
             })
                 .then((res) => res.json())
@@ -35,25 +35,32 @@ const MyOrders = () => {
     }
 
     return (
-        <div className="col-md-10 mx-auto">
-            <h3 className="pt-3 text-center ">Your Orders</h3>
+        <div style={{
+            background: `url(${bg})`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center center",
+            backgroundSize: "cover",
+            minHeight: "120vh",
+            marginTop: "-150px",
+          }} className="mx-auto">
+            <h3 className="text-center"  style={{paddingTop:"170px", color: "white"}}>Your Orders</h3>
             <div className="pt-3">
-                <table className='table table-bordered table-hover'>
+                <table className='table table-bordered table-hover' data-aos="fade-up" data-aos-duration="1000">
                     <thead>
                         <tr style={{ textAlign: 'center' }}>
-                            <td className="bg-info text-black" style={{ width: '15vw' }}>Tour</td>
-                            <td className="bg-info text-black" style={{ width: '18vw' }}>Booking Details</td>
-                            <td className="bg-info text-black" style={{ width: '8vw' }}>Status</td>
-                            <td className="bg-info text-black" style={{ width: '8vw' }}>Action</td>
+                            <td className="bg-white text-dark" style={{ width: '5vw' }}>Tour</td>
+                            <td className="bg-white text-dark" style={{ width: '15vw' }}>Booking Details</td>
+                            <td className="bg-white text-dark" style={{ width: '4vw' }}>Status</td>
+                            <td className="bg-white text-dark" style={{ width: '4vw' }}>Action</td>
                         </tr>
                     </thead>
                     <tbody>
                         {
                             orders.map(od =>
                                 <tr key={od._id} style={{ textAlign: 'center' }} >
-                                    <td>{od.name} <br /> <span className="text-primary">Price: {od.price}</span> <br /><img style={{ width: '20vw', height: "100px", objectFit:"cover" }} src={od.image} alt="" /> </td>
-                                    <td>{od.displayName} <br />{od.email} <br />{od.address} <br />Tour Date: {od.date}</td>
-                                    <td>{od.status}</td>
+                                    <td className="text-white">{od.name} <br /> <span className="text-warning">Price: {od.price}</span> <br /><img className ="btn-grad p-0 m-auto" style={{ width: '20vw', height: "100px", objectFit: "cover" }} src={od.image} alt="" /> </td>
+                                    <td className="text-white">{od.displayName} <br />{od.email} <br />{od.address} <br />Tour Date: {od.date}</td>
+                                    <td className="text-white">{od.status}</td>
                                     <td>
                                         <Button variant="danger" onClick={() => handleDelete(od._id)}
                                             className="btn btn-danger px-3 py-2" >Delete</Button>

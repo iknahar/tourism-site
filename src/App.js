@@ -49,7 +49,7 @@ function App() {
             </PrivateRoute>
           </Switch>
         </Router>
-        <Footer></Footer>
+        
       </AuthProvider>
     </div>
   );

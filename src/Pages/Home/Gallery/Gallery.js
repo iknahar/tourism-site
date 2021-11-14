@@ -11,7 +11,7 @@ const Gallery = () => {
             <div class="row ">
                 <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 ">
                     <img
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+                        src="https://i.ibb.co/2KR3dG8/Frame-10.jpg"
                         class="w-100 shadow-1-strong rounded mb-4 " 
                         alt=""
                         data-aos="fade-up-right"
@@ -19,7 +19,7 @@ const Gallery = () => {
                     />
 
                     <img
-                        src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg"
+                        src="https://i.ibb.co/HHcXMf3/Frame-11.jpg"
                         class="w-100 shadow-1-strong rounded mb-4"
                         alt=""
                         data-aos="fade-up-right"
@@ -29,7 +29,7 @@ const Gallery = () => {
 
                 <div class="col-lg-4 mb-4 mb-lg-0">
                     <img
-                        src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg"
+                        src="https://i.ibb.co/SVzpRTV/Frame-12.jpg"
                         class="w-100 shadow-1-strong rounded mb-4"
                         alt=""
                         data-aos="fade-up"
@@ -37,7 +37,7 @@ const Gallery = () => {
                     />
 
                     <img
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg"
+                        src="https://i.ibb.co/VDXn3tZ/Frame-13.jpg"
                         class="w-100 shadow-1-strong rounded mb-4"
                         alt=""
                         data-aos="fade-up-down"
@@ -47,7 +47,7 @@ const Gallery = () => {
 
                 <div class="col-lg-4 mb-4 mb-lg-0">
                     <img
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
+                        src="https://i.ibb.co/fpbq04F/Frame-14.jpg"
                         class="w-100 shadow-1-strong rounded mb-4"
                         alt=""
                         data-aos="fade-up-left"
@@ -55,7 +55,7 @@ const Gallery = () => {
                     />
 
                     <img
-                        src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg"
+                        src="https://i.ibb.co/qrBzZBd/Frame-15.jpg"
                         className="w-100 shadow-1-strong rounded mb-4"
                         alt=""
                         data-aos="fade-up-left"

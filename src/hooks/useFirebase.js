@@ -14,7 +14,7 @@ const useFirebase = () => {
 
     console.log(getAuth)
     const auth = getAuth();
-    
+
 
     const registerUser = (email, password, name, history) => {
         setIsLoading(true);
@@ -52,7 +52,7 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     }
 
-  
+
 
     // observer user state
     useEffect(() => {
@@ -71,12 +71,12 @@ const useFirebase = () => {
         return () => unsubscribed;
     }, [auth])
 
-   
+
 
     const logout = () => {
         setIsLoading(true);
         signOut(auth).then(() => {
-            
+
         }).catch((error) => {
             console.log("Error");
         })
@@ -85,7 +85,7 @@ const useFirebase = () => {
 
     // const saveUser = (email, displayName, method) => {
     //     const user = { email, displayName };
-    //     fetch('http://localhost:5000/users', {
+    //     fetch('https://grim-crypt-33204.herokuapp.com/users', {
     //         method: method,
     //         headers: {
     //             'content-type': 'application/json'
