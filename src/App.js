@@ -8,6 +8,8 @@ import Naviagation from './Pages/Shared/Navigation/Navigation';
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 import Footer from './Pages/Shared/Footer/Footer';
+import Details from './Pages/Details/Details';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 AOS.init();
 
 function App() {
@@ -30,6 +32,9 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
+            <PrivateRoute exact path="/products/:productId">
+            <Details></Details>
+          </PrivateRoute>
           </Switch>
         </Router>
         <Footer></Footer>
