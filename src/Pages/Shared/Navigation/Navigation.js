@@ -9,7 +9,7 @@ const Naviagation = () => {
     textDecoration: "none",
     color: "white",
     margin: "0 20px",
-    
+
   };
 
   const bg = {
@@ -30,23 +30,32 @@ const Naviagation = () => {
         <Container fluid>
           <Navbar.Collapse id="navbarScroll">
             <Nav className="ms-auto align-items-center">
-            <NavLink style={navStyle} activeStyle={activeSty} to="/home">
-              Home
-            </NavLink>
-
-            {user?.email ? (
-              <span>
-                
-                <Button className="rounded-pill px-5 btn-grad" onClick={logout}>Logout</Button>
-              </span>
-            ) : (
-              <NavLink
-                style={{ textDecoration: "none", color: "white" }}
-                to="/login"
-              >
-                <Button className="rounded-pill px-5 btn-grad">Login</Button>
+              <NavLink style={navStyle} activeStyle={activeSty} to="/home">
+                Home
               </NavLink>
-            )}
+              {user?.email && <NavLink style={navStyle} activeStyle={activeSty} to="/myBooking">
+                My Bookings
+              </NavLink>}
+              {user?.email && <NavLink style={navStyle} activeStyle={activeSty} to="/allorders">
+                Manage All Orders
+              </NavLink>}
+              {user?.email && <NavLink style={navStyle} activeStyle={activeSty} to="/addservice">
+                Add A Service
+              </NavLink>}
+              
+              <span className="text-warning">{user?.displayName}</span>
+              {user?.email ? (
+                <span>
+                  <Button className="rounded-pill px-5 btn-grad" onClick={logout}>Logout</Button>
+                </span>
+              ) : (
+                <NavLink
+                  style={{ textDecoration: "none", color: "white" }}
+                  to="/login"
+                >
+                  <Button className="rounded-pill px-5 btn-grad">Login</Button>
+                </NavLink>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

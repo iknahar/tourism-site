@@ -10,6 +10,9 @@ import 'aos/dist/aos.css';
 import Footer from './Pages/Shared/Footer/Footer';
 import Details from './Pages/Details/Details';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import MyOrders from './Pages/MyOrders/MyOrders';
+import ManageAllOrders from './Pages/ManageAllOrders/ManageAllOrders';
+import AddService from './Pages/AddService/AddService';
 AOS.init();
 
 function App() {
@@ -33,8 +36,17 @@ function App() {
               <Home />
             </Route>
             <PrivateRoute exact path="/products/:productId">
-            <Details></Details>
-          </PrivateRoute>
+              <Details></Details>
+            </PrivateRoute>
+            <PrivateRoute path="/myBooking">
+              <MyOrders></MyOrders>
+            </PrivateRoute>
+            <PrivateRoute path="/allorders">
+              <ManageAllOrders></ManageAllOrders>
+            </PrivateRoute>
+            <PrivateRoute path="/addservice">
+              <AddService></AddService>
+            </PrivateRoute>
           </Switch>
         </Router>
         <Footer></Footer>

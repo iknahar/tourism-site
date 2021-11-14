@@ -29,7 +29,7 @@ const Details = () => {
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((result) => console.log(result));
+      .then((result) =>  alert("Booking Successful"));
 
   };
 
@@ -40,36 +40,38 @@ const Details = () => {
   }, [productId]);
 
   return (
-    <div className="">
-      <h5 className="text-white text center btn-grad p-3" style={{ marginTop: "32px" }}><b>{product?.name}</b></h5>
-      <div className="row p-5 d-flex align-items-center">
-        <div className="col-md-6 btn-grad col-12 imgdiv" style={{ overflow: "hidden"  }}> <img style={{ objectFit: "cover", overflow: "hidden", height: "50vh", width: "100%" }} src={product.image} alt="" /></div>
+    <div>
+      <h5 className="text-white text center btn-grad rounded-0" style={{ marginTop: "32px" }}><b>{product?.name}</b></h5>
+      <div className="row container-fluid p-5 d-flex align-items-top">
+        <div className="col-md-6 col-12 imgdiv" style={{ overflow: "hidden"  }}> <img style={{ objectFit: "cover", overflow: "hidden", height: "50vh", width: "100%" }} src={product.image} alt="" /></div>
         <div className="col-md-6">
-          <p className="pDescription btn-grad2 px-3 p-1 d-inline my-2"> <b> ${product?.price}</b></p>
+          <p className="pDescription btn-grad2 px-3 py-1 d-inline my-2"> <b> ${product?.price}</b></p>
           <br />
           <br />
-          <small className="text-muted my-4">{product?.description}</small>
+          <small className="text-muted my-4">{product?.description}</small> <br /><br />
+          <small className="text-primary m-0 p-0">User's Name: {user?.displayName}</small> <br />
+          <small className="text-primary m-0 p-0">User's Email: {user?.email}</small>
           
           <br />
           <form onSubmit={handleSubmit(onSubmit)}>
             <input
               {...register("address")}
               placeholder="Enter Your Address"
-              className="input-field mt-2 px-3 py-2 border border-info rounded-0 w-50"
+              className="input-field mt-2 px-3 py-2 border border-info rounded-0 w-75"
             />
             <br />
             <input
               {...register("date")}
               placeholder="Pick A date"
               type="datetime-local"
-              className="input-field mt-2 px-3 py-2 border border-info rounded-0 w-50"
+              className="input-field mt-2 px-3 py-2 border border-info rounded-0 w-75"
             />
             <br />
             <br />
             <input
               type="submit"
               value="Book Now"
-              className="btn-grad2 mt-2 py-3 mx-1 rounded-pill w-50"
+              className="btn-grad2 mt-2 py-3 mx-1 rounded-pill"
             />
           </form>  
         </div>
