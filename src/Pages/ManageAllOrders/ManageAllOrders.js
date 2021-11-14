@@ -36,8 +36,6 @@ const ManageAllOrders = () => {
 
     };
 
-
-
     function handleDelete(id) {
         const confirmation = window.confirm("Are you sure that you want to delete?");
         if (confirmation) {
